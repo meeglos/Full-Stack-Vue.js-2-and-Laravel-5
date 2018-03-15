@@ -1,6 +1,3 @@
-import Vue from 'vue';
-import sample from './data';
-
 var app = new Vue({
 	el: '#app',
 	data: {
@@ -8,7 +5,7 @@ var app = new Vue({
 		address: sample.address,
 		about: sample.about,
 		headerImageStyle: {
-			'background-image': 'url(/images/header.jpg)'
+			'background-image': 'url(sample/header.jpg)'
 		},
 		amenities: sample.amenities,
 		prices: sample.prices,
