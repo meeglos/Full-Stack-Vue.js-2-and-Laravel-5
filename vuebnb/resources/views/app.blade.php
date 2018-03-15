@@ -16,7 +16,7 @@
 </div>
 <div id="app">
   <div class="header">
-    <div class="header-img" v-bind:style="headerImageStyle"v-on:click="modalOpen = true">
+    <div class="header-img" v-bind:style="headerImageStyle" v-on:click="modalOpen = true">
       <button class="view-photos">
         View Photos
       </button>
@@ -58,5 +58,6 @@
   </div>
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>
