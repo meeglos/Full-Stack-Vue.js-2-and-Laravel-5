@@ -1,5 +1,6 @@
 <?php
 
+use App\Listing; 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +12,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('app');
-});
+// Route::get('/', function () {
+//     return view('app');
+// });
+
+Route::get('/listing/{listing}', 'ListingController@get_listing_web');
