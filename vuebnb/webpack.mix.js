@@ -26,4 +26,13 @@ mix
     .copy('node_modules/open-sans-all/fonts', 'public/fonts')
     .copy('node_modules/font-awesome/fonts', 'public/fonts')
     .copy('resources/assets/images', 'public/images')
-    ;
+    .options({
+      extractVueStyles: 'public/css/vue-style.css'
+    })
+    .webpackConfig({
+      resolve: {
+        alias: {
+          'vue$': 'vue/dist/vue.runtime.esm.js'
+        }
+      }
+    });

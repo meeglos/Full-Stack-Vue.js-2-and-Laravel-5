@@ -14,6 +14,7 @@
   </div>
 </template>
 <script>
+  import CarouselControl from '../components/CarouselControl.vue';
   export default {
     props: [ 'images' ],
     data() {
@@ -39,21 +40,28 @@
       }
     },
     components: {
-      'carousel-control': {
-        template: `<i :class="classes" @click="clicked"></i>`,
-        props: [ 'dir' ],
-        computed: {
-          classes() {
-            return 'carousel-control fa fa-2x fa-chevron-' + this.dir;
-          }
-        },
-        methods: {
-          clicked() {
-            this.$emit('change-image', this.dir === 'left' ? -1 : 1);
-          }
-        }
-      }
+      CarouselControl
     }
   }
 </script>
-<style></style>
+<style>
+  .image-carousel {
+    height: 100%;
+    margin-top: -12vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-carousel img {
+    width: 100%;
+  }
+
+  .image-carousel .controls {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
