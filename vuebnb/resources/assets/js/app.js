@@ -10,9 +10,4 @@ var app = new Vue({
 	el: '#app',
 	render: h => h(App),
 	router
-});
 
-routes: [
-	{ path: '/', component: HomePage, name: 'home' },
-	{ path: '/listing/:listing', component: ListingPage, name: 'listing' }
-]
