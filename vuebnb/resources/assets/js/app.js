@@ -1,3 +1,4 @@
+import App from '../components/App.vue';
 import "core-js/fn/object/assign";
 import Vue from 'vue';
 
@@ -10,3 +11,8 @@ var app = new Vue({
 	render: h => h(App),
 	router
 });
+
+routes: [
+	{ path: '/', component: HomePage, name: 'home' },
+	{ path: '/listing/:listing', component: ListingPage, name: 'listing' }
+]

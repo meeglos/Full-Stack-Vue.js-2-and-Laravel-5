@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 	<div>
 		<div id="toolbar">
 			<router-link :to="{ name: 'home' }">
@@ -19,6 +20,18 @@
 		}
 	}
 </script>
+=======
+  <div>
+    <div id="toolbar">
+		<router-link :to="{ name: 'home' }">
+			<img class="icon" src="/images/logo.png">
+			<h1>vuebnb</h1>
+		</router-link>
+	</div>
+    <router-view></router-view>
+  </div>
+</template>
+>>>>>>> 9be42d17ef9d6da738fbf5d5fa313ac989f9f18a
 <style>
 	#toolbar {
 		border-bottom: 1px solid #e4e4e4;
