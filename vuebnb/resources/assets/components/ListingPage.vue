@@ -1,18 +1,11 @@
 <template>
   <div>
     <header-image 
-<<<<<<< HEAD
       v-if="images[0]"
       :image-url="images[0]" 
       @header-clicked="openModal"
     ></header-image>
     <div class="home-container">
-=======
-      :image-url="images[0]" 
-      @header-clicked="openModal"
-    ></header-image>
-    <div class="container">
->>>>>>> 9be42d17ef9d6da738fbf5d5fa313ac989f9f18a
       <div class="heading">
         <h1>{{ title }}</h1>
         <p>{{ address }}</p>
@@ -42,10 +35,11 @@
   </div>
 </template>
 <script>
+  import routeMixin from '../js/route-mixin';
   import { populateAmenitiesAndPrices } from '../js/helpers';
 
-  let serverData = JSON.parse(window.vuebnb_server_data);
-  let model = populateAmenitiesAndPrices(serverData.listing);
+  // let serverData = JSON.parse(window.vuebnb_server_data);
+  // let model = populateAmenitiesAndPrices(serverData.listing);
 
 //   let model = JSON.parse(window.vuebnb_listing_model);
 //   model = populateAmenitiesAndPrices(model);
@@ -55,8 +49,6 @@
   import FeatureList from './FeatureList.vue';
   import HeaderImage from './HeaderImage.vue';
   import ExpandableText from './ExpandableText.vue';
-<<<<<<< HEAD
-  import routeMixin from '../js/route-mixin';
 
   export default {
     mixins: [ routeMixin ],
@@ -69,12 +61,6 @@
         prices: [],
         images: []
       }
-=======
-
-  export default {
-    data() {
-      return Object.assign(model, {});
->>>>>>> 9be42d17ef9d6da738fbf5d5fa313ac989f9f18a
     },
     components: {
       ImageCarousel,
@@ -84,12 +70,9 @@
       ExpandableText
     },
     methods: {
-<<<<<<< HEAD
       assignData({ listing }) {
         Object.assign(this.$data, populateAmenitiesAndPrices(listing));
       },
-=======
->>>>>>> 9be42d17ef9d6da738fbf5d5fa313ac989f9f18a
       openModal() {
         this.$refs.imagemodal.modalOpen = true;
       }

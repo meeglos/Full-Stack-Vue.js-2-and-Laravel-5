@@ -2,19 +2,14 @@
   <div class="image-carousel">
     <img :src="image">
     <div class="controls">
-      <carousel-control 
-        dir="left" 
-        @change-image="changeImage"
-      ></carousel-control>
-      <carousel-control 
-        dir="right" 
-        @change-image="changeImage"
-      ></carousel-control>
+      <carousel-control dir="left" @change-image="changeImage"></carousel-control>
+      <carousel-control dir="right" @change-image="changeImage"></carousel-control>
     </div>
   </div>
 </template>
 <script>
   import CarouselControl from '../components/CarouselControl.vue';
+
   export default {
     props: [ 'images' ],
     data() {
@@ -63,5 +58,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    top: calc(50% - 40px);
+    left: 0;
   }
 </style>
